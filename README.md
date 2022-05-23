@@ -1,1 +1,1 @@
-# JS-repetion-practice
+# JS-practice
