@@ -3,22 +3,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM model</title>
+    <title>JavaScript</title>
+    <style>
+        li{
+            list-style-type: none;
+            max-width: 200px;
+            padding: 8px;
+            margin: 8px auto;
+            background: #eee;
+            border: 1px dotted #ddd;
+        }
+    </style>
 </head>
 <body>
-    <h1 id="page-title">The DOM model</h1>
+    <h1 id="page-title">Todos</h1>
 
-    <a href="https://www.google.com">Link to the page...</a>
+    <ul>
+        <li>zakupy</li>
+        <li>homework</li>
+        <li>repeat firebase</li>
+        <li>opłaty</li>
+    </ul>
 
-    <div>
-        <p>hello, world</p>
-        <p>lorem ipsum</p>
-        <p class="error">this is an error message</p>
-    </div>
-    
-    <div class="content">
-        <p>this is the content</p>
-    </div>
+    <button>Add todo</button>
+       
     <script src="script.js"></script>
 </body>
 </html>
