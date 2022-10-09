@@ -42,8 +42,15 @@
 
 // let result = String(50)
 
-let result = Boolean(100)
-console.log(result, typeof result)
+// let result = Boolean(100)
+// console.log(result, typeof result)
+
+let age = 25
+let year = 2022
+
+age = 30
+
+console.log(age, year)
 
 
 
