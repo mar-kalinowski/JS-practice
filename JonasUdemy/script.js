@@ -863,7 +863,7 @@ console.log(marcinObject["lastName"]);
 } */
 
 marcinObject.location = "Poland";
-marcinObject["email"] = "mjk.gdansk@gmail.com";
+marcinObject["email"] = "";
 console.log(marcinObject);
 
 console.log(
@@ -873,3 +873,99 @@ console.log(
 console.log(marcinObject.calcAge());
 console.log(marcinObject.age);
 console.log(marcinObject.getSummary());
+
+const mark = {
+  firstName: "Mark",
+  lastName: "Miller",
+  mass: 78,
+  height: 1.69,
+
+  calcBMI: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  },
+};
+
+const john = {
+  firstName: "John",
+  lastName: "Smith",
+  mass: 92,
+  height: 1.95,
+
+  calcBMI: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  },
+};
+
+console.log(mark.calcBMI());
+console.log(john.calcBMI());
+console.log(
+  `${mark.firstName} ${mark.lastName}'s BMI (${mark.bmi}) is higher than ${john.firstName} ${john.lastName}'s (${john.bmi})! `
+);
+
+console.log(mark);
+
+for (let rep = 1; rep <= 10; rep++) {
+  console.log(`Lifting weights repetion ${rep} 🏋️‍♂️`);
+}
+
+const array = ["marcin", "kalinowski", 1979, true];
+const types = [];
+
+for (let i = 0; i < array.length; i++) {
+  console.log(array[i]);
+  types.push(typeof array[i]);
+}
+console.log(types);
+console.log(years);
+const ages = [];
+for (let i = 0; i < years.length; i++) {
+  ages.push(new Date().getFullYear() - years[i]);
+}
+console.log(ages);
+
+for (let exercise = 1; exercise < 4; exercise++) {
+  console.log(`-------- Starting exercise ${exercise}`);
+  for (let rep = 1; rep < 6; rep++) {
+    console.log(`Exercise ${exercise}: Lifging weight repetiotion ${rep} 🏋️‍♂️`);
+  }
+}
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+console.log(dice);
+
+while (dice !== 6) {
+  console.log(`You rolled a ${dice}`);
+  dice = Math.trunc(Math.random() * 6) + 1;
+  if (dice === 6) console.log("Loop is about to end...");
+}
+
+const billsLoop = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+
+const tipsLoop = [];
+const totalsLoop = [];
+
+const calcTipLoop = (bill) =>
+  bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+
+for (let i = 0; i < billsLoop.length; i++) {
+  const tip = calcTipLoop(billsLoop[i]);
+  tipsLoop.push(tip);
+  totalsLoop.push(billsLoop[i] + tip);
+}
+
+console.log(tipsLoop);
+console.log(totalsLoop);
+
+const calcAverage = function (arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  console.log(sum);
+  const average = sum / arr.length;
+  return average;
+};
+
+calcAverage(totalsLoop);
